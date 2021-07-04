@@ -1,0 +1,93 @@
+@mixin dflex {
+    display: flex;
+    align-items: center;
+}
+header{
+    height: 12vh;
+    padding: 2vh 0vh;
+    nav{
+        @include dflex();
+        justify-content: space-between;
+        width: 90%;
+        height: 50px;
+        margin: 0 auto;
+        
+        
+        .nav-logo{
+            cursor: pointer;      
+            img{
+                width:50px;              
+            }
+        }
+        
+        .hamburger{
+            height: 25px;
+            width: 25px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            cursor: pointer;
+
+            
+            .bar{
+                background: #fff;
+                height: .3rem;
+                width: 28px;
+                margin: 0 auto;
+                border-radius: 5px;
+                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+            }
+            &.active .bar:nth-child(3){
+                // opacity: 0;
+                display: none;
+            }
+            &.active .bar:nth-child(1){
+                transform: translateY(7px) rotate(38deg);
+            }
+            &.active .bar:nth-child(2){
+                transform: translateY(-7px) rotate(-41deg);
+            }
+        }
+        .nav-menu{
+            position: fixed;
+            left: -100%;
+            top: 5rem;
+            border: 1px solid #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 90%;
+            height: 100vh;
+            margin: 0 auto;
+            text-align: center;
+            transition: 0.3s;
+            background: rgba(255, 255, 255, 0.986);
+            z-index: 100;
+            border-radius: 12px;
+            
+            &.active{
+                left: 5%;
+            }
+            
+            .nav-link{   
+                color: rgb(0, 0, 0);
+                font-size: 1.6rem;
+                font-family:$ff-mont;
+                // line-height: 10rem;
+
+            }
+
+            .resume{
+                border: 1px solid rgb(0, 0, 0);
+                padding: .8rem 2rem;
+                
+                &:focus{
+                    border: 1px dashed #fff;
+                }
+                
+            }
+
+        }
+    }
+}

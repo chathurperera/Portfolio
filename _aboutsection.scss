@@ -1,0 +1,68 @@
+@mixin dflex {
+    display: flex;
+    align-items: center;
+}
+
+.about-sec{
+    min-height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    
+    .about-sec-content{
+        padding-top: 4rem;
+        .image{
+            .image-frame{
+                position: relative;
+                border: 3px solid white;
+                max-width: 400px;
+                height: 451px;
+                margin: 0 auto;
+                .img{
+                    position: absolute;
+                    top: -6%;
+                    left: -5%;
+                    width: 100%;
+                    max-width: 400px;
+                    height: auto;
+                    transition: all .5s;
+                    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                    filter: grayscale(100%);
+                    &:hover{
+                        transform: translate(-10px,-10px);
+                        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+                        filter: grayscale(0%);
+                    }
+                }
+            }
+        }
+        .text-content{
+            padding-top: 5rem;
+            .info{
+                font-size: 2rem;
+                font-family: $ff-mont;
+                opacity: .8;
+                font-weight: 300;
+            }
+            .skills-title{
+                padding: 3rem 0rem;
+                font-family: $ff-mont;
+                font-size: 3rem;
+                font-weight: 500;
+            }
+            .skills-list{
+                font-family: $ff-ptmono;
+                font-size: 2rem;
+                @include dflex();
+                justify-content: space-around;
+                
+                li{
+                    ul{
+                        li{
+                            padding: 2rem 0rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
