@@ -1,3 +1,8 @@
+// * {
+//     outline: 1px solid #f00 !important;
+//     opacity: 1 !important;
+//     visibility: visible !important;
+//   }
 *,
 *::after,
 *::before{
@@ -8,8 +13,11 @@
 html{
     font-size: 62.5%;    
     color: #fff;
+    scroll-behavior: smooth;
 }
 body{
+    padding: 0;
+    margin: 0;
     background: #010203;
     // cursor: none;
 }

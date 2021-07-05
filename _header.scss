@@ -74,7 +74,6 @@ header{
                 color: rgb(0, 0, 0);
                 font-size: 1.6rem;
                 font-family:$ff-mont;
-                // line-height: 10rem;
 
             }
 
@@ -88,6 +87,36 @@ header{
                 
             }
 
+        }
+    }
+}
+@media (min-width:780px) {
+    
+    header{
+        nav{
+            .hamburger{
+                display: none;
+            }
+            .nav-menu{
+                position: static;
+                border-radius: 0;
+                background: #000;
+                flex-direction: row;
+                justify-content: space-between;
+                height: auto;
+                width: 40%;
+                margin: 0;
+                border: none;
+                z-index: 0;
+
+                .nav-link{
+                    color: #fff;
+                    font-size: 1.3rem;
+                }
+                .resume{
+                    border: 1px solid #fff;
+                }
+            }
         }
     }
 }

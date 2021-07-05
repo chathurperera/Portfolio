@@ -9,9 +9,12 @@
 html {
   font-size: 62.5%;
   color: #fff;
+  scroll-behavior: smooth;
 }
 
 body {
+  padding: 0;
+  margin: 0;
   background: #010203;
 }
 
@@ -90,7 +93,7 @@ section {
 .cursor {
   width: 2.5rem;
   height: 2.5rem;
-  border: 2px dotted white;
+  border: 2px solid white;
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -200,6 +203,31 @@ header nav .nav-menu .resume:focus {
   border: 1px dashed #fff;
 }
 
+@media (min-width: 780px) {
+  header nav .hamburger {
+    display: none;
+  }
+  header nav .nav-menu {
+    position: static;
+    border-radius: 0;
+    background: #000;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    width: 40%;
+    margin: 0;
+    border: none;
+    z-index: 0;
+  }
+  header nav .nav-menu .nav-link {
+    color: #fff;
+    font-size: 1.3rem;
+  }
+  header nav .nav-menu .resume {
+    border: 1px solid #fff;
+  }
+}
+
 .about-sec {
   min-height: 100vh;
   width: 90%;
@@ -210,28 +238,23 @@ header nav .nav-menu .resume:focus {
   padding-top: 4rem;
 }
 
-.about-sec .about-sec-content .image .image-frame {
-  position: relative;
-  border: 3px solid white;
-  max-width: 400px;
-  height: 451px;
-  margin: 0 auto;
+.about-sec .about-sec-content .image {
+  text-align: center;
 }
 
-.about-sec .about-sec-content .image .image-frame .img {
-  position: absolute;
-  top: -6%;
-  left: -5%;
+.about-sec .about-sec-content .image .img {
+  border-radius: 8px;
+  margin: 0 auto;
   width: 100%;
   max-width: 400px;
   height: auto;
-  transition: all .5s;
+  transition: all .4s;
   -webkit-filter: grayscale(100%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
 
-.about-sec .about-sec-content .image .image-frame .img:hover {
+.about-sec .about-sec-content .image .img:hover {
   transform: translate(-10px, -10px);
   -webkit-filter: grayscale(0%);
   /* Safari 6.0 - 9.0 */
@@ -266,6 +289,22 @@ header nav .nav-menu .resume:focus {
 
 .about-sec .about-sec-content .text-content .skills-list li ul li {
   padding: 2rem 0rem;
+}
+
+@media (min-width: 780px) {
+  .about-sec .about-sec-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 2rem;
+  }
+  .about-sec .about-sec-content .image {
+    grid-column: 2/3;
+  }
+  .about-sec .about-sec-content .text-content {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 }
 
 .work-sec {
@@ -319,7 +358,7 @@ header nav .nav-menu .resume:focus {
 .work-sec .project .project-info .project-description {
   padding: 4rem 0rem;
   font-family: "Raleway", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 200;
   opacity: 0.8;
 }
@@ -384,11 +423,16 @@ main .intro-sec .arrows li:nth-of-type(3) {
 
 footer {
   height: 100vh;
+  margin: 0 auto;
+}
+
+footer h2 {
   width: 90%;
   margin: 0 auto;
 }
 
 footer .footer-sec {
+  width: 90%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -404,38 +448,70 @@ footer .footer-sec .footer-cta h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 3rem;
   font-weight: 300;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
+  max-width: 880px;
 }
 
 footer .footer-sec .footer-cta .mail-cta {
-  padding: 0.8rem 3rem;
-  background: #fff;
-  color: #010203;
+  padding: 0.8rem 4rem;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #fff;
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
+  transition: all .4s;
+}
+
+footer .footer-sec .footer-cta .mail-cta:hover {
+  background: #fff;
+  color: #000;
 }
 
 footer .footer-sec .social-media {
   width: 100%;
+  max-width: 530px;
+  margin: 0 auto;
+}
+
+footer .footer-sec .social-media .social-media-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+footer .footer-sec .social-media .social-media-accounts {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-around;
 }
 
-footer .footer-sec .social-media div .channel {
+footer .footer-sec .social-media .social-media-accounts .account img {
+  width: 40px;
+}
+
+footer .credit {
   font-family: "Raleway", sans-serif;
-  font-size: 3rem;
-  line-height: 3;
+  font-size: 1rem;
   text-align: center;
-  border: 1px solid #fff;
-  border-radius: 20px;
-  padding: .8rem 2rem;
-  margin: 3rem 0rem;
-  color: #fff;
 }
 
-footer .footer-sec .social-media div .channel:hover {
-  background: #fff;
-  color: #000;
+@media (min-width: 540px) {
+  main .intro-sec .intro-title {
+    font-size: 5.2rem;
+  }
+  main .intro-sec .intro-subtitle {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 780px) {
+  main .intro-sec .intro-title {
+    font-size: 7rem;
+  }
+  main .intro-sec .intro-subtitle {
+    max-width: 900px;
+    font-size: 2.8rem;
+  }
 }

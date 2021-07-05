@@ -11,20 +11,14 @@
     .about-sec-content{
         padding-top: 4rem;
         .image{
-            .image-frame{
-                position: relative;
-                border: 3px solid white;
-                max-width: 400px;
-                height: 451px;
-                margin: 0 auto;
+            text-align: center;
                 .img{
-                    position: absolute;
-                    top: -6%;
-                    left: -5%;
+                    border-radius: 8px;
+                    margin: 0 auto;
                     width: 100%;
                     max-width: 400px;
                     height: auto;
-                    transition: all .5s;
+                    transition: all .4s;
                     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
                     filter: grayscale(100%);
                     &:hover{
@@ -32,7 +26,7 @@
                         -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
                         filter: grayscale(0%);
                     }
-                }
+                
             }
         }
         .text-content{
@@ -63,6 +57,25 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media (min-width:780px) {
+    .about-sec{
+        .about-sec-content{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr ;
+          column-gap: 2rem;
+
+          .image{
+              grid-column: 2/3;
+          }
+          .text-content{
+              grid-column: 1/2;
+              grid-row: 1/2;
+          }
         }
     }
 }
