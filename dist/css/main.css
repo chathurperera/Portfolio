@@ -10,12 +10,14 @@ html {
   font-size: 62.5%;
   color: #fff;
   scroll-behavior: smooth;
+  overflow: auto;
 }
 
 body {
   padding: 0;
   margin: 0;
   background: #010203;
+  cursor: none;
 }
 
 li {
@@ -29,6 +31,10 @@ a {
 section {
   width: 90%;
   margin: 0 auto;
+}
+
+.noScroll {
+  position: fixed;
 }
 
 .section-title {
@@ -91,6 +97,7 @@ section {
 }
 
 .cursor {
+  display: none;
   width: 2.5rem;
   height: 2.5rem;
   border: 2px solid white;
@@ -101,16 +108,22 @@ section {
   transition: all 0.3s ease;
   transition-property: background,transform;
   transform-origin: 100% 100%;
-  z-index: -1;
 }
 
 .link-grow {
-  transform: scale(1.2);
+  transform: scale(1.8);
   background: white;
 }
 
 .hovered-link {
   color: black;
+}
+
+@media (min-width: 780px) {
+  .cursor {
+    display: block;
+    z-index: 1;
+  }
 }
 
 header {
@@ -146,7 +159,7 @@ header nav .hamburger {
 
 header nav .hamburger .bar {
   background: #fff;
-  height: .3rem;
+  height: .4rem;
   width: 28px;
   margin: 0 auto;
   border-radius: 5px;
@@ -154,22 +167,22 @@ header nav .hamburger .bar {
   -webkit-transition: all 0.3s ease-in-out;
 }
 
-header nav .hamburger.active .bar:nth-child(3) {
-  display: none;
+header nav .hamburger.active .bar:nth-child(2) {
+  opacity: 0;
 }
 
 header nav .hamburger.active .bar:nth-child(1) {
-  transform: translateY(7px) rotate(38deg);
+  transform: translateY(8px) rotate(48deg);
 }
 
-header nav .hamburger.active .bar:nth-child(2) {
-  transform: translateY(-7px) rotate(-41deg);
+header nav .hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-41deg);
 }
 
 header nav .nav-menu {
   position: fixed;
   left: -100%;
-  top: 5rem;
+  top: 7rem;
   border: 1px solid #fff;
   display: flex;
   flex-direction: column;
@@ -180,7 +193,7 @@ header nav .nav-menu {
   text-align: center;
   transition: 0.3s;
   background: rgba(255, 255, 255, 0.986);
-  z-index: 100;
+  z-index: 5;
   border-radius: 12px;
 }
 
@@ -192,6 +205,7 @@ header nav .nav-menu .nav-link {
   color: black;
   font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
+  cursor: none;
 }
 
 header nav .nav-menu .resume {
@@ -217,9 +231,9 @@ header nav .nav-menu .resume:focus {
     width: 40%;
     margin: 0;
     border: none;
-    z-index: 0;
   }
   header nav .nav-menu .nav-link {
+    z-index: 1;
     color: #fff;
     font-size: 1.3rem;
   }

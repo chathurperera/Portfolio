@@ -31,28 +31,28 @@ header{
             
             .bar{
                 background: #fff;
-                height: .3rem;
+                height: .4rem;
                 width: 28px;
                 margin: 0 auto;
                 border-radius: 5px;
                 transition: all 0.3s ease-in-out;
                 -webkit-transition: all 0.3s ease-in-out;
             }
-            &.active .bar:nth-child(3){
-                // opacity: 0;
-                display: none;
+            &.active .bar:nth-child(2){
+                opacity: 0;
+                // display: none;
             }
             &.active .bar:nth-child(1){
-                transform: translateY(7px) rotate(38deg);
+                transform: translateY(8px) rotate(48deg);
             }
-            &.active .bar:nth-child(2){
-                transform: translateY(-7px) rotate(-41deg);
+            &.active .bar:nth-child(3){
+                transform: translateY(-8px) rotate(-41deg);
             }
         }
         .nav-menu{
             position: fixed;
             left: -100%;
-            top: 5rem;
+            top: 7rem;
             border: 1px solid #fff;
             display: flex;
             flex-direction: column;
@@ -63,7 +63,7 @@ header{
             text-align: center;
             transition: 0.3s;
             background: rgba(255, 255, 255, 0.986);
-            z-index: 100;
+            z-index:5;
             border-radius: 12px;
             
             &.active{
@@ -74,6 +74,9 @@ header{
                 color: rgb(0, 0, 0);
                 font-size: 1.6rem;
                 font-family:$ff-mont;
+                cursor: none;
+
+
 
             }
 
@@ -90,6 +93,8 @@ header{
         }
     }
 }
+
+
 @media (min-width:780px) {
     
     header{
@@ -107,11 +112,14 @@ header{
                 width: 40%;
                 margin: 0;
                 border: none;
-                z-index: 0;
+                // z-index: 0;
 
                 .nav-link{
+                    z-index: 1;
                     color: #fff;
                     font-size: 1.3rem;
+
+
                 }
                 .resume{
                     border: 1px solid #fff;

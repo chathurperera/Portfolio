@@ -14,12 +14,13 @@ html{
     font-size: 62.5%;    
     color: #fff;
     scroll-behavior: smooth;
+    overflow: auto;
 }
 body{
     padding: 0;
     margin: 0;
     background: #010203;
-    // cursor: none;
+    cursor: none;
 }
 li{
     list-style: none;
@@ -32,7 +33,9 @@ section{
     width: 90%;
     margin: 0 auto;
 }
-
+.noScroll{
+    position: fixed;
+}
 @mixin dflex {
     display: flex;
     align-items: center;
