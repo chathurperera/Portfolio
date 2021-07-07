@@ -1,6 +1,6 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
-let navLinks = document.querySelectorAll('.nav-link');
+const  navLinks = document.querySelectorAll('.nav-link');
 
 
 //mobile nav
