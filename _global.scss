@@ -1,8 +1,4 @@
-// * {
-//     outline: 1px solid #f00 !important;
-//     opacity: 1 !important;
-//     visibility: visible !important;
-//   }
+
 *,
 *::after,
 *::before{
@@ -10,6 +6,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 html{
     font-size: 62.5%;    
     color: #fff;
@@ -35,6 +32,11 @@ section{
 .noScroll{
     position: fixed;
 }
+
+.scroll-down header{
+    transform: translate3d(0,-100%,0);
+}
+
 @mixin dflex {
     display: flex;
     align-items: center;
@@ -50,4 +52,12 @@ section{
         width: 40%;
         margin-left: 1rem;
     }
+}
+@media (min-width:780px) {
+    body{
+        cursor: none;
+    }
+ .section-title{
+     font-size: 5rem;
+ }   
 }

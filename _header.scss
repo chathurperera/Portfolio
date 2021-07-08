@@ -5,6 +5,7 @@
 header{
     height: 12vh;
     padding: 2vh 0vh;
+    @include dflex();
     nav{
         @include dflex();
         justify-content: space-between;
@@ -96,6 +97,13 @@ header{
 @media (min-width:780px) {
     
     header{
+        background: rgba(0, 0, 0, 0.7);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        position:fixed;
+        width: 100%;
+        z-index: 2;
+        transition: all 300ms ease-in-out ;
         nav{
             .hamburger{
                 display: none;
@@ -118,13 +126,16 @@ header{
                         z-index: 1;
                         color: #fff;
                         font-size: 1.3rem;
-                        padding: 1.5rem 1rem;
                         height: 100%;
+                        cursor: none;
     
-                        &.hovered-link{
-                            color: rgb(0, 0, 0);
+                        &:hover ~ .cursor{
+                            transform: scale(3);
                         }
     
+                    }
+                    .nav-link:hover ~ .cursor{
+                        transform: scale(3);
                     }
 
                 }

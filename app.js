@@ -1,6 +1,8 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const  navLinks = document.querySelectorAll('.nav-link');
+const cursorr = document.querySelector('.cursor');
+
 
 
 //mobile nav
@@ -26,24 +28,50 @@ tl.fromTo('.intro-sec',{opacity:0},{opacity:1 , duration:1},'-=1')
 
 
 //custom cursor 
-let mouseCursor = document.querySelector('.cursor');
-
 window.addEventListener('mousemove',cursor);
 function cursor(e) {
-    mouseCursor.style.top = e.pageY + 'px';
-    mouseCursor.style.left = e.pageX + 'px';
+    cursorr.style.top = e.pageY + 'px';
+    cursorr.style.left = e.pageX + 'px';
 }
 
-navLinks.forEach(link => {
-    link.addEventListener('mouseover', ( ) => {
-        mouseCursor.classList.add('link-grow');
-        link.classList.add('hovered-link');
+navLinks.forEach((link) => {
+    link.addEventListener('mouseover',() => {
+        cursorr.style.mixBlendMode = 'difference';
+        cursorr.style.transform = 'scale(2.5)';
     })
-    link.addEventListener('mouseleave', ( ) => {
-        mouseCursor.classList.remove('link-grow');
-        link.classList.remove('hovered-link');
+    link.addEventListener('mouseleave',() => {
+        cursorr.style.mixBlendMode = 'normal';
+        cursorr.style.transform = 'scale(1)';
     })
 })
+
+
+
+//scroll 
+
+const body = document.body;
+let lastScroll = 0;
+window.addEventListener('scroll',() => {
+    const currentscroll = window.pageYOffset;
+
+    if(currentscroll <= 0){
+        body.classList.remove('scroll-up')
+    }
+
+    if(currentscroll > lastScroll && !body.classList.contains('scroll-down')){
+        body.classList.remove('scroll-up')
+        body.classList.add('scroll-down')
+    }
+    if(currentscroll < lastScroll && body.classList.contains('scroll-down')){
+        body.classList.remove('scroll-down')
+        body.classList.add('scroll-up')
+    }
+    
+    
+    lastScroll = currentscroll;
+})
+
+
 
 
 

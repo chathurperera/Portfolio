@@ -36,6 +36,10 @@ section {
   position: fixed;
 }
 
+.scroll-down header {
+  transform: translate3d(0, -100%, 0);
+}
+
 .section-title {
   display: flex;
   align-items: center;
@@ -48,6 +52,15 @@ section {
 .section-title .line {
   width: 40%;
   margin-left: 1rem;
+}
+
+@media (min-width: 780px) {
+  body {
+    cursor: none;
+  }
+  .section-title {
+    font-size: 5rem;
+  }
 }
 
 .intro {
@@ -102,8 +115,9 @@ section {
 @media (min-width: 780px) {
   .cursor {
     display: block;
-    width: 2.2rem;
-    height: 2.2rem;
+    z-index: 3;
+    width: 1.5rem;
+    height: 1.5rem;
     border: 2px solid white;
     border-radius: 50%;
     position: absolute;
@@ -112,10 +126,11 @@ section {
     transition: all 0.3s ease;
     transition-property: background,transform;
     transform-origin: 100% 100%;
+    background: #fff;
   }
   .link-grow {
     transform: scale(2.5);
-    background: white;
+    mix-blend-mode: difference;
   }
   .hovered-link {
     color: black;
@@ -125,6 +140,8 @@ section {
 header {
   height: 12vh;
   padding: 2vh 0vh;
+  display: flex;
+  align-items: center;
 }
 
 header nav {
@@ -213,6 +230,15 @@ header nav .nav-menu .resume:focus {
 }
 
 @media (min-width: 780px) {
+  header {
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    transition: all 300ms ease-in-out;
+  }
   header nav .hamburger {
     display: none;
   }
@@ -233,11 +259,14 @@ header nav .nav-menu .resume:focus {
     z-index: 1;
     color: #fff;
     font-size: 1.3rem;
-    padding: 1.5rem 1rem;
     height: 100%;
+    cursor: none;
   }
-  header nav .nav-menu .nav-item .nav-link.hovered-link {
-    color: black;
+  header nav .nav-menu .nav-item .nav-link:hover ~ .cursor {
+    transform: scale(3);
+  }
+  header nav .nav-menu .nav-item .nav-link:hover ~ .cursor {
+    transform: scale(3);
   }
   header nav .nav-menu .resume {
     border: 1px solid #fff;
@@ -340,7 +369,7 @@ header nav .nav-menu .resume:focus {
 .work-sec .project .project-info .project-heading {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .work-sec .project .project-info .project-heading .project-title h3 {
@@ -377,6 +406,33 @@ header nav .nav-menu .resume:focus {
   font-size: 2rem;
   font-weight: 200;
   opacity: 0.8;
+  max-width: 500px;
+}
+
+@media (min-width: 780px) {
+  .work-sec .project-container .project {
+    height: 45vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .work-sec .project-container .project:nth-child(odd) img {
+    grid-column: 2/3;
+  }
+  .work-sec .project-container .project:nth-child(odd) .project-info {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .work-sec .project-container .project .project-info .project-heading .project-title h4 span {
+    font-size: 1.3rem;
+    opacity: .8;
+  }
+  .work-sec .project-container .project .project-info .project-description {
+    padding: 1rem 0rem;
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 main .intro-sec {
@@ -389,7 +445,7 @@ main .intro-sec {
 main .intro-sec .intro-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  font-size: 4.6rem;
+  font-size: 4rem;
   padding-top: 5rem;
   width: 100%;
 }
@@ -523,7 +579,11 @@ footer .credit {
 }
 
 @media (min-width: 780px) {
+  main .intro-sec {
+    height: 100vh;
+  }
   main .intro-sec .intro-title {
+    padding-top: 2em;
     font-size: 7rem;
   }
   main .intro-sec .intro-subtitle {

@@ -8,9 +8,9 @@
 @media (min-width:780px) {
     .cursor{
         display: block;
-        // z-index:1;
-        width: 2.2rem;
-        height: 2.2rem;
+        z-index:3;
+        width: 1.5rem;
+        height: 1.5rem;
         border: 2px solid rgb(255, 255, 255);
         border-radius: 50% ;
         position:absolute;
@@ -19,11 +19,13 @@
         transition: all 0.3s ease;
         transition-property:background,transform;
         transform-origin: 100% 100%;
+        background: #fff;
+
         
     }
     .link-grow{
         transform: scale(2.5);
-        background: rgb(255, 255, 255); 
+        mix-blend-mode: difference;
     }
     
     .hovered-link{
