@@ -17,7 +17,6 @@ body {
   padding: 0;
   margin: 0;
   background: #010203;
-  overflow-x: hidden;
 }
 
 li {
@@ -139,10 +138,51 @@ section {
 }
 
 header {
-  height: 12vh;
+  height: 100vh;
   padding: 2vh 0vh;
-  display: flex;
-  align-items: center;
+}
+
+header .intro-sec {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+header .intro-sec .intro-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 4rem;
+  padding-top: 5rem;
+  width: 100%;
+}
+
+header .intro-sec .intro-subtitle {
+  opacity: 0.8;
+  padding-top: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 200;
+  max-width: 600px;
+}
+
+header .intro-sec .arrow {
+  position: absolute;
+  top: 100%;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 header nav {
@@ -230,8 +270,28 @@ header nav .nav-menu .resume:focus {
   border: 1px dashed #fff;
 }
 
+@media (min-width: 540px) {
+  header .intro-sec .intro-title {
+    font-size: 5.2rem;
+  }
+  header .intro-sec .intro-subtitle {
+    font-size: 2.3rem;
+  }
+}
+
 @media (min-width: 780px) {
-  header {
+  header .intro-sec {
+    height: 100vh;
+  }
+  header .intro-sec .intro-title {
+    padding-top: 2em;
+    font-size: 7rem;
+  }
+  header .intro-sec .intro-subtitle {
+    max-width: 900px;
+    font-size: 2.8rem;
+  }
+  header nav {
     background: rgba(0, 0, 0, 0.7);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -239,6 +299,8 @@ header nav .nav-menu .resume:focus {
     width: 100%;
     z-index: 2;
     transition: all 300ms ease-in-out;
+    border: 1px solid #fff;
+    padding: 3rem 5%;
   }
   header nav .hamburger {
     display: none;
@@ -436,50 +498,6 @@ header nav .nav-menu .resume:focus {
   }
 }
 
-main .intro-sec {
-  width: 90%;
-  margin: 0 auto;
-  height: calc(100vh - 12vh);
-  position: relative;
-}
-
-main .intro-sec .intro-title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 4rem;
-  padding-top: 5rem;
-  width: 100%;
-}
-
-main .intro-sec .intro-subtitle {
-  opacity: 0.8;
-  padding-top: 3rem;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 200;
-  max-width: 600px;
-}
-
-main .intro-sec .arrow {
-  position: absolute;
-  top: 88vh;
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
-
 footer {
   height: 100vh;
   margin: 0 auto;
@@ -562,19 +580,5 @@ footer .credit {
   }
   main .intro-sec .intro-subtitle {
     font-size: 2.3rem;
-  }
-}
-
-@media (min-width: 780px) {
-  main .intro-sec {
-    height: 100vh;
-  }
-  main .intro-sec .intro-title {
-    padding-top: 2em;
-    font-size: 7rem;
-  }
-  main .intro-sec .intro-subtitle {
-    max-width: 900px;
-    font-size: 2.8rem;
   }
 }

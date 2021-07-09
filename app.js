@@ -38,21 +38,21 @@ tl.fromTo('.intro-sec',{opacity:0},{opacity:1 , duration:1},'-=1')
 
 
 //custom cursor 
+const cursorScale = document.querySelector('.cursor-scale')
 window.addEventListener('mousemove',cursor);
 function cursor(e) {
     cursorr.style.top = e.pageY + 'px';
     cursorr.style.left = e.pageX + 'px';
 }
 
-navLinks.forEach((link) => {
-    link.addEventListener('mouseover',() => {
-        cursorr.style.mixBlendMode = 'difference';
-        cursorr.style.transform = 'scale(2.5)';
-    })
-    link.addEventListener('mouseleave',() => {
-        cursorr.style.mixBlendMode = 'normal';
-        cursorr.style.transform = 'scale(1)';
-    })
+
+cursorScale.addEventListener('mouseover',() => {
+    cursorr.style.mixBlendMode = 'difference';
+    cursorr.style.transform = 'scale(7)';
+})
+cursorScale.addEventListener('mouseleave',() => {
+    cursorr.style.mixBlendMode = 'normal';
+    cursorr.style.transform = 'scale(1)';
 })
 
 
