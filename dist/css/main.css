@@ -17,6 +17,7 @@ body {
   padding: 0;
   margin: 0;
   background: #010203;
+  overflow-x: hidden;
 }
 
 li {
@@ -459,38 +460,24 @@ main .intro-sec .intro-subtitle {
   max-width: 600px;
 }
 
-main .intro-sec .arrows {
+main .intro-sec .arrow {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40px;
-  height: 60px;
-  overflow: hidden;
+  top: 88vh;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
 }
 
-main .intro-sec .arrows li {
-  list-style: none;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  width: 20px;
-  height: 20px;
-  transform: rotate(45deg);
-  border-bottom: 3px solid white;
-  border-right: 3px solid white;
-  animation: animate 2s infinite linear;
-}
-
-main .intro-sec .arrows li:nth-of-type(1) {
-  animation-delay: 0s;
-}
-
-main .intro-sec .arrows li:nth-of-type(2) {
-  animation-delay: 0.2s;
-}
-
-main .intro-sec .arrows li:nth-of-type(3) {
-  animation-delay: 0.4s;
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 footer {

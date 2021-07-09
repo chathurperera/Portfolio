@@ -4,6 +4,16 @@ const  navLinks = document.querySelectorAll('.nav-link');
 const cursorr = document.querySelector('.cursor');
 
 
+var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
 
 //mobile nav
 const mobileMenu = () => {
@@ -47,8 +57,7 @@ navLinks.forEach((link) => {
 
 
 
-//scroll 
-
+//reveal navbar on scroll
 const body = document.body;
 let lastScroll = 0;
 window.addEventListener('scroll',() => {
