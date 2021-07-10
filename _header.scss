@@ -4,11 +4,10 @@
 }
 header{
     height: 100vh;
-    padding: 2vh 0vh;
+    position: relative;
     .intro-sec {
         width: 90%;
         margin: 0 auto;
-        position: relative;
         .intro-title {
           font-family: $ff-mont;
           font-weight: 200;
@@ -26,7 +25,7 @@ header{
         }
         .arrow{
           position: absolute;
-          top: 100%;
+          bottom: 0;
           -moz-animation: bounce 2s infinite;
       -webkit-animation: bounce 2s infinite;
       animation: bounce 2s infinite;
@@ -162,14 +161,13 @@ header{
             }
           }
         nav{
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.726);
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             position:fixed;
             width: 100%;
             z-index: 2;
             transition: all 300ms ease-in-out ;
-            border: $bod;
             padding: 3rem 5% ;
             .hamburger{
                 display: none;
@@ -195,14 +193,12 @@ header{
                         height: 100%;
                         cursor: none;
     
-                        &:hover ~ .cursor{
-                            transform: scale(3);
+                        &:hover {
+                          color: rgba(255, 255, 255, 0.329);
                         }
     
                     }
-                    .nav-link:hover ~ .cursor{
-                        transform: scale(3);
-                    }
+
 
                 }
                 .resume{
