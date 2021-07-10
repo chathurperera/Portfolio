@@ -18,7 +18,7 @@ body{
     margin: 0;
     background: #010203;
     // cursor: none;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 li{
     list-style: none;
@@ -34,7 +34,7 @@ section{
     position: fixed;
 }
 
-.scroll-down header{
+.scroll-down nav{
     transform: translate3d(0,-100%,0);
 }
 

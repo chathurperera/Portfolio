@@ -3,9 +3,46 @@
     align-items: center;
 }
 header{
-    height: 12vh;
-    padding: 2vh 0vh;
-    @include dflex();
+    height: 100vh;
+    position: relative;
+    .intro-sec {
+        width: 90%;
+        margin: 0 auto;
+        .intro-title {
+          font-family: $ff-mont;
+          font-weight: 200;
+          font-size: 4rem;
+          padding-top: 5rem;
+          width: 100%;
+        }
+        .intro-subtitle {
+          opacity: 0.8;
+          padding-top: 3rem;
+          font-family: $ff-mont;
+          font-size: 1.8rem;
+          font-weight: 200;
+          max-width: 600px;
+        }
+        .arrow{
+          position: absolute;
+          bottom: 0;
+          -moz-animation: bounce 2s infinite;
+      -webkit-animation: bounce 2s infinite;
+      animation: bounce 2s infinite;
+          
+        }
+        @keyframes bounce {
+          0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+          }
+          40% {
+            transform: translateY(-30px);
+          }
+          60% {
+            transform: translateY(-15px);
+          }
+        }
+      }
     nav{
         @include dflex();
         justify-content: space-between;
@@ -91,20 +128,47 @@ header{
 
         }
     }
+    
 }
 
+@media (min-width:540px) {
+    header{
+      .intro-sec{
+        .intro-title{
+          font-size: 5.2rem;
+        }
+        .intro-subtitle{
+          font-size: 2.3rem;
+        }
+      }
+    }
+  }
 
 @media (min-width:780px) {
     
     header{
-        background: rgba(0, 0, 0, 0.7);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        position:fixed;
-        width: 100%;
-        z-index: 2;
-        transition: all 300ms ease-in-out ;
+        .intro-sec{
+            height: 100vh;
+            .intro-title{
+              padding-top: 2em;
+              font-size: 7rem;
+        
+            }
+            .intro-subtitle{
+              // margin-top: 3rem;
+              max-width: 900px;
+              font-size:2.8rem;
+            }
+          }
         nav{
+            background: rgba(0, 0, 0, 0.726);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            position:fixed;
+            width: 100%;
+            z-index: 2;
+            transition: all 300ms ease-in-out ;
+            padding: 3rem 5% ;
             .hamburger{
                 display: none;
             }
@@ -129,14 +193,12 @@ header{
                         height: 100%;
                         cursor: none;
     
-                        &:hover ~ .cursor{
-                            transform: scale(3);
+                        &:hover {
+                          color: rgba(255, 255, 255, 0.329);
                         }
     
                     }
-                    .nav-link:hover ~ .cursor{
-                        transform: scale(3);
-                    }
+
 
                 }
                 .resume{
