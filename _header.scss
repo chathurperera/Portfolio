@@ -147,6 +147,11 @@ header{
 @media (min-width:780px) {
     
     header{
+      nav{
+        .nav-logo{
+          cursor: none;
+        }
+      }
         .intro-sec{
             height: 100vh;
             .intro-title{

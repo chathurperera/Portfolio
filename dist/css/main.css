@@ -281,6 +281,9 @@ header nav .nav-menu .resume:focus {
 }
 
 @media (min-width: 780px) {
+  header nav .nav-logo {
+    cursor: none;
+  }
   header .intro-sec {
     height: 100vh;
   }

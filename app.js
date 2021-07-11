@@ -81,6 +81,16 @@ window.addEventListener('scroll',() => {
 })
 
 
+//prevents the last scroll location on the page to be restored
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+} else { 
+//callback for the browser compatibility 
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+}
+
 
 
 
