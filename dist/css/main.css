@@ -382,18 +382,21 @@ header nav .nav-menu .resume:focus {
 }
 
 .about-sec .about-sec-content .text-content .skills-title {
-  padding: 3rem 0rem;
-  font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
+  padding-top: 4rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
   font-weight: 500;
+  text-align: center;
 }
 
 .about-sec .about-sec-content .text-content .skills-list {
   font-family: "PT Mono", monospace;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  text-align: center;
 }
 
 .about-sec .about-sec-content .text-content .skills-list li ul li {
@@ -406,6 +409,7 @@ header nav .nav-menu .resume:focus {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     column-gap: 2rem;
+    padding: 5rem 0rem;
   }
   .about-sec .about-sec-content .image {
     grid-column: 2/3;
