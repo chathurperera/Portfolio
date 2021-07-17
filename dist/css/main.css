@@ -449,7 +449,8 @@ header nav .nav-menu .resume:focus {
 .work-sec .project .project-info .project-heading .project-title h4 {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: .8rem 0rem;
 }
 
 .work-sec .project .project-info .project-heading .project-title h4 span {
@@ -500,6 +501,7 @@ header nav .nav-menu .resume:focus {
     font-size: 1.5rem;
     width: 90%;
     margin: 0 auto;
+    line-height: 1.5;
   }
 }
 
