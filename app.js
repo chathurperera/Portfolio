@@ -4,16 +4,7 @@ const  navLinks = document.querySelectorAll('.nav-link');
 const cursorr = document.querySelector('.cursor');
 
 
-var docWidth = document.documentElement.offsetWidth;
 
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetWidth > docWidth) {
-      console.log(el);
-    }
-  }
-);
 
 //mobile nav
 const mobileMenu = () => {
@@ -33,7 +24,7 @@ hamburger.addEventListener('click',mobileMenu);
 const tl = gsap.timeline({defaults: {ease:'power1.out'}})
 tl.to('.text',{y:'0%',duration:1,stagger:0.25})
 tl.to('.intro',{y:'-100%',duration:.8});
-tl.fromTo('nav',{opacity:0},{opacity:1 , duration:1})
+tl.fromTo('nav',{opacity:0},{opacity:1 , duration:.8})
 tl.fromTo('.intro-sec',{opacity:0},{opacity:1 , duration:1},'-=1')
 
 

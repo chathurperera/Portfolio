@@ -80,7 +80,7 @@ section {
 
 .intro .intro-text {
   color: black;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "PT Mono", monospace;
 }
 
@@ -93,6 +93,12 @@ section {
 .intro .intro-text .hide span {
   transform: translateY(100%);
   display: inline-block;
+}
+
+@media (min-width: 780px) {
+  .intro .intro-text {
+    font-size: 5rem;
+  }
 }
 
 @keyframes animate {
@@ -187,6 +193,7 @@ header .intro-sec .arrow {
 }
 
 header nav {
+  padding-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -243,7 +250,7 @@ header nav .nav-menu {
   flex-direction: column;
   justify-content: space-evenly;
   width: 90%;
-  height: 100vh;
+  height: 85vh;
   margin: 0 auto;
   text-align: center;
   transition: 0.3s;
@@ -480,7 +487,7 @@ header nav .nav-menu .resume:focus {
 
 @media (min-width: 780px) {
   .work-sec .project-container .project {
-    height: 45vh;
+    height: 50vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;

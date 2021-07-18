@@ -44,6 +44,7 @@ header{
         }
       }
     nav{
+      padding-top: 2rem;
         @include dflex();
         justify-content: space-between;
         width: 90%;
@@ -96,7 +97,7 @@ header{
             flex-direction: column;
             justify-content: space-evenly;
             width: 90%;
-            height: 100vh;
+            height: 85vh;
             margin: 0 auto;
             text-align: center;
             transition: 0.3s;

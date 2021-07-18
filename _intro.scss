@@ -11,7 +11,7 @@
     z-index: 1000;
     .intro-text{
         color: rgb(0, 0, 0);
-        font-size: 4rem;
+        font-size: 3rem;
         font-family: $ff-ptmono;
 
         .hide{
@@ -23,6 +23,14 @@
                 transform: translateY(100%);
                 display: inline-block;
             }
+        }
+    }
+}
+
+@media (min-width:780px) {
+    .intro{
+        .intro-text{
+            font-size: 5rem;
         }
     }
 }
