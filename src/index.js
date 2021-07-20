@@ -1,3 +1,5 @@
+import './sass/main.scss'
+
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const  navLinks = document.querySelectorAll('.nav-link');
