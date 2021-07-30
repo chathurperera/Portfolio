@@ -5,10 +5,17 @@
 
 .about-sec{
     min-height: 100vh;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+
+    .section-title{
+        width: 90%;
+        margin: 0 auto;
+    }
     
     .about-sec-content{
+        width: 90%;
+        margin: 0 auto;
         padding-top: 4rem;
         .image{
             text-align: center;
@@ -25,6 +32,7 @@
                         transform: translate(-10px,-10px);
                         -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
                         filter: grayscale(0%);
+                        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
                     }
                 
             }
@@ -32,7 +40,7 @@
         .text-content{
             padding-top: 5rem;
             .info{
-                font-size: 2rem;
+                font-size: 1.8rem;
                 font-family: $ff-mont;
                 opacity: .8;
                 font-weight: 300;
@@ -41,19 +49,19 @@
                 padding-top: 4rem;
                 font-family: $ff-raleway;
                 font-size: 2rem;
-                font-weight: 500;
-                text-align: center;
+                font-weight: 00;
             }
-            .skills-list{
+            .skills-list{               
                 font-family: $ff-ptmono;
                 font-size: 1.5rem;
                 letter-spacing: 1px;
-                @include dflex();
-                justify-content: space-around;
-                text-align: center;
-                
+                // @include dflex();
+                // flex-direction: column;
+                // text-align: center;
                 li{
                     ul{
+                        display: flex;                 
+                        justify-content: space-around;
                         li{
                             padding: 2rem 0rem;
                         }

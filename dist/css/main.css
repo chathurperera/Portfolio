@@ -65,42 +65,6 @@ section {
   }
 }
 
-.intro {
-  background: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.intro .intro-text {
-  color: black;
-  font-size: 3rem;
-  font-family: "PT Mono", monospace;
-}
-
-.intro .intro-text .hide {
-  overflow: hidden;
-  background: white;
-  margin: 2rem 0rem;
-}
-
-.intro .intro-text .hide span {
-  transform: translateY(100%);
-  display: inline-block;
-}
-
-@media (min-width: 780px) {
-  .intro .intro-text {
-    font-size: 5rem;
-  }
-}
-
 @keyframes animate {
   0% {
     top: -20%;
@@ -134,7 +98,7 @@ section {
     transition: all 0.3s ease;
     transition-property: background,transform;
     transform-origin: 100% 100%;
-    background: #fff;
+    background: white;
   }
   .link-grow {
     transform: scale(2.5);
@@ -346,11 +310,18 @@ header nav .nav-menu .resume:focus {
 
 .about-sec {
   min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-sec .section-title {
   width: 90%;
   margin: 0 auto;
 }
 
 .about-sec .about-sec-content {
+  width: 90%;
+  margin: 0 auto;
   padding-top: 4rem;
 }
 
@@ -375,6 +346,7 @@ header nav .nav-menu .resume:focus {
   -webkit-filter: grayscale(0%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(0%);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .about-sec .about-sec-content .text-content {
@@ -382,7 +354,7 @@ header nav .nav-menu .resume:focus {
 }
 
 .about-sec .about-sec-content .text-content .info {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
   opacity: .8;
   font-weight: 300;
@@ -392,18 +364,18 @@ header nav .nav-menu .resume:focus {
   padding-top: 4rem;
   font-family: "Raleway", sans-serif;
   font-size: 2rem;
-  font-weight: 500;
-  text-align: center;
+  font-weight: 00;
 }
 
 .about-sec .about-sec-content .text-content .skills-list {
   font-family: "PT Mono", monospace;
   font-size: 1.5rem;
   letter-spacing: 1px;
+}
+
+.about-sec .about-sec-content .text-content .skills-list li ul {
   display: flex;
-  align-items: center;
   justify-content: space-around;
-  text-align: center;
 }
 
 .about-sec .about-sec-content .text-content .skills-list li ul li {
@@ -544,10 +516,11 @@ footer .footer-sec .footer-cta h3 {
 }
 
 footer .footer-sec .footer-cta .mail-cta {
-  padding: 0.8rem 4rem;
+  padding: 0.8rem 5.3rem;
   background: transparent;
   color: #ffffff;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
+  border-image: linear-gradient(135deg, #FF0000 0%, #0061ff 50%, #FF00AB 100%) 1;
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
   transition: all .4s;
@@ -556,6 +529,7 @@ footer .footer-sec .footer-cta .mail-cta {
 footer .footer-sec .footer-cta .mail-cta:hover {
   background: #fff;
   color: #000;
+  border: none;
 }
 
 footer .footer-sec .social-media {
