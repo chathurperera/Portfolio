@@ -360,6 +360,10 @@ header nav .nav-menu .resume:focus {
   font-weight: 300;
 }
 
+.about-sec .about-sec-content .text-content .info .icon:hover {
+  color: blue;
+}
+
 .about-sec .about-sec-content .text-content .skills-title {
   padding-top: 4rem;
   font-family: "Raleway", sans-serif;
@@ -519,11 +523,10 @@ footer .footer-sec .footer-cta .mail-cta {
   padding: 0.8rem 5.3rem;
   background: transparent;
   color: #ffffff;
-  border: 2px solid #fff;
-  border-image: linear-gradient(135deg, #FF0000 0%, #0061ff 50%, #FF00AB 100%) 1;
+  border: .8px solid #fff;
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
-  transition: all .4s;
+  transition: all .6s;
 }
 
 footer .footer-sec .footer-cta .mail-cta:hover {
@@ -556,10 +559,23 @@ footer .footer-sec .social-media .social-media-accounts .account img {
   width: 40px;
 }
 
+footer .footer-sec .social-media .social-media-accounts .account svg {
+  height: 40px;
+  width: 40px;
+  color: #b6b5b55e;
+}
+
+footer .footer-sec .social-media .social-media-accounts .account svg:hover {
+  color: #f7f7f7;
+}
+
 footer .credit {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   text-align: center;
+  position: absolute;
+  bottom: 5px;
+  left: 45%;
 }
 
 @media (min-width: 540px) {

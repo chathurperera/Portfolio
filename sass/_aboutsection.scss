@@ -44,6 +44,10 @@
                 font-family: $ff-mont;
                 opacity: .8;
                 font-weight: 300;
+
+                .icon:hover{
+                    color: blue;
+                }
             }
             .skills-title{
                 padding-top: 4rem;
