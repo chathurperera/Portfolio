@@ -18,13 +18,6 @@ navLinks.forEach(n => n.addEventListener('click',() => {
 }))
 hamburger.addEventListener('click',mobileMenu);
 
-
-//splash intro
-const tl = gsap.timeline({defaults: {ease:'power1.out'}})
-tl.fromTo('nav',{opacity:0},{opacity:1 , duration:1.5})
-tl.fromTo('.intro-sec',{opacity:0},{opacity:1 , duration:1.5},'-=1')
-
-
 //custom cursor 
 const cursorScale = document.querySelector('.cursor-scale')
 window.addEventListener('mousemove',cursor);
