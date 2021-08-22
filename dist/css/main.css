@@ -42,6 +42,10 @@ section {
   transform: translate3d(0, -100%, 0);
 }
 
+.animate__animated.animate__fadeIn {
+  --animate-duration: 2s;
+}
+
 .section-title {
   display: flex;
   align-items: center;

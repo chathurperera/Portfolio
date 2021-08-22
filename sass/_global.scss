@@ -37,7 +37,9 @@ section{
 .scroll-down nav{
     transform: translate3d(0,-100%,0);
 }
-
+.animate__animated.animate__fadeIn {
+    --animate-duration: 2s;
+  }
 @mixin dflex {
     display: flex;
     align-items: center;
