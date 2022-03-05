@@ -4,7 +4,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  cursor: none;
 }
 
 html {
@@ -127,7 +126,7 @@ header .intro-sec {
 header .intro-sec .intro-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
-  font-size: 20rem;
+  font-size: 4rem;
   padding-top: 5rem;
   width: 100%;
 }
