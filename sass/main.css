@@ -508,6 +508,7 @@ header nav .nav-menu .resume:focus {
 
 .work-sec .project {
   margin: 4rem 0rem;
+  padding: 0 80px;
 }
 
 .work-sec .project img {
@@ -526,7 +527,6 @@ header nav .nav-menu .resume:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 460px;
   margin: 0 auto;
 }
 
@@ -548,14 +548,16 @@ header nav .nav-menu .resume:focus {
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 15px;
   padding: .8rem 0rem;
 }
 
 .work-sec .project .project-info .project-heading .project-title h4 span {
+  padding: 3px 6px;
+  border-radius: 25px;
   font-size: 1rem;
+  background: #2D3138;
+  color: white;
   font-family: "PT Mono", monospace;
   font-weight: 200;
   line-height: 15px;
@@ -580,7 +582,6 @@ header nav .nav-menu .resume:focus {
   font-size: 2rem;
   font-weight: 200;
   opacity: 1;
-  max-width: 500px;
 }
 
 @media (min-width: 780px) {
@@ -614,8 +615,7 @@ header nav .nav-menu .resume:focus {
   .work-sec .project-container .project .project-info .project-description {
     padding: 1rem 0rem;
     font-size: 1.5rem;
-    width: 90%;
-    margin: 0 auto;
+    max-width: 450px;
     line-height: 1.5;
   }
 }
