@@ -5,7 +5,6 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  cursor: none;
 }
 
 html {
@@ -574,6 +573,37 @@ header nav .nav-menu .resume:focus {
 
 .work-sec .project .project-info .project-heading .external-links a img {
   width: 50%;
+}
+
+.work-sec .project .project-info .button-wrap {
+  margin-top: 15px;
+}
+
+.work-sec .project .project-info .button-wrap button {
+  width: 100px;
+  padding: 7px 12px;
+  border-radius: 2px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.work-sec .project .project-info .button-wrap .view {
+  background: #fff;
+  border: 1px solid #fff;
+}
+
+.work-sec .project .project-info .button-wrap .view:hover {
+  background: #010203;
+  color: #fff;
+}
+
+.work-sec .project .project-info .button-wrap .code {
+  margin-left: 15px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .work-sec .project .project-info .project-description {

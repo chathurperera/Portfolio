@@ -55,6 +55,32 @@
           }
         }
       }
+      .button-wrap{
+        margin-top: 15px;
+        button{
+          width: 100px;
+          padding: 7px 12px;
+          border-radius: 2px;
+          border: none;
+          font-family: $ff-mont;
+          transition: all .2s ease-in-out;
+        }
+        .view{
+          background: #fff;
+          border: 1px solid #fff;
+          &:hover{
+            background:#010203;
+            color: #fff;
+          }
+        }
+        .code{
+          margin-left: 15px;
+          background: transparent;
+          border: 1px solid #fff;
+          color: #fff;
+
+        }
+      }
       .project-description {
         padding: 4rem 0rem;
         font-family: $ff-raleway;
