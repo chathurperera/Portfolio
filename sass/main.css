@@ -322,6 +322,15 @@ header nav .nav-menu .resume:focus {
   }
 }
 
+@media (max-width: 540px) {
+  header .intro-sec .intro-title {
+    font-size: 5.2rem;
+  }
+  header .intro-sec .intro-subtitle {
+    font-size: 20px;
+  }
+}
+
 @media (min-width: 780px) {
   header nav .nav-logo {
     cursor: none;

@@ -144,6 +144,18 @@ header{
       }
     }
   }
+@media (max-width:540px) {
+    header{
+      .intro-sec{
+        .intro-title{
+          font-size: 5.2rem;
+        }
+        .intro-subtitle{
+          font-size: 20px;
+        }
+      }
+    }
+  }
 
 @media (min-width:780px) {
     
