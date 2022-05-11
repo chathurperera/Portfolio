@@ -659,6 +659,12 @@ header nav .nav-menu .resume:focus {
   }
 }
 
+@media (max-width: 1000px) {
+  .work-sec .project {
+    padding: 0 0;
+  }
+}
+
 footer {
   height: 100vh;
   margin: 0 auto;
